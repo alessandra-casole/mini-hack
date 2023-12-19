@@ -9,7 +9,7 @@ import { HomeComponent } from './feature/home/home.component';
 import { CompanyComponent } from './feature/company/company.component';
 import { CompaniesComponent } from './feature/companies/companies.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './core/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,9 +19,13 @@ import { FooterComponent } from './core/footer/footer.component';
     HomeComponent,
     CompanyComponent,
     CompaniesComponent,
-    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FontAwesomeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

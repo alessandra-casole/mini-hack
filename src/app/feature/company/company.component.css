@@ -1,0 +1,9 @@
+.logo-img {
+  width: 300px;
+}
+
+.badge {
+  --bs-badge-padding-x: 0.8em;
+  --bs-badge-padding-y: 0.5em;
+
+}

@@ -1,1 +1,39 @@
-<p>company works!</p>
+<div *ngIf="company" class="container d-flex flex-column">
+  <div class="row">
+    <div class="col text-center">
+      <img
+        class="logo-img"
+        src="{{ company.logo }} "
+        alt="{{ company.name }}"
+      />
+    </div>
+  </div>
+
+  <p>{{ company.description }}</p>
+
+  <div class="col">
+      <h3>Keywords:</h3>
+      <div class="keyword-tags">
+        <ng-container *ngFor="let element of company.target; let last = last">
+          <span class="badge bg-secondary">{{ element }}</span>
+          <span *ngIf="!last"> • </span>
+        </ng-container>
+      </div>
+  </div>
+
+  <div id="carouselExample" class="carousel slide mt-4">
+    <div class="carousel-inner">
+      <div *ngFor="let image of company.images; let i = index" class="carousel-item" [class.active]="i === 0">
+        <img [src]="image" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
