@@ -23,6 +23,10 @@ export class MinihackService {
       });
   }
 
+  togglePreferred(company: Companies) {
+    this.updatePreferredState(company);
+  }
+
   // Aggiorna lo stato preferred e salva nel localStorage
   updatePreferredState(company: Companies) {
     company.preferred = !company.preferred;

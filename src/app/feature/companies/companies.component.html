@@ -6,7 +6,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ company.name }}</h5>
           <p class="card-text">
-            <button class="border-0 bg-transparent" (click)="togglePreferred(company)">
+            <button class="border-0 bg-transparent" (click)="minihackService.togglePreferred(company)">
               <fa-icon [icon]="company.preferred ? faHeartSolid : faHeart"></fa-icon>
             </button>
           </p>

@@ -14,10 +14,6 @@ export class CompaniesComponent implements OnInit {
   faHeart = faHeart;
   faHeartSolid = faHeartSolid;
 
-  togglePreferred(company: Companies) {
-    this.minihackService.updatePreferredState(company);
-  }
-
   constructor(
     public minihackService: MinihackService,
     public minihackState: MinihackState
