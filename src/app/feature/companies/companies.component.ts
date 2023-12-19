@@ -11,17 +11,9 @@ import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./companies.component.css'],
 })
 export class CompaniesComponent implements OnInit {
-  companies?: Companies;
-  arrayOfCompanies?: Companies[];
-  changeIcon?: string;
-  count?: number;
-  myvar: boolean = true;
   faHeart = faHeart;
   faHeartSolid = faHeartSolid;
 
-  // togglePreferred(company: Companies) {
-  //   company.preferred = !company.preferred;
-  // }
   togglePreferred(company: Companies) {
     this.minihackService.updatePreferredState(company);
   }
