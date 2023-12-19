@@ -32,11 +32,5 @@ export class MinihackService {
     );
   }
 
-  // getId(id: number) {
-  //   return this.http.get<Companies>(
-  //     `https://my-json-server.typicode.com/zoelounge/menupizza/companies/${id}`
-  //   );
-  // }
-
   constructor(public minihackState: MinihackState, public http: HttpClient) {}
 }
